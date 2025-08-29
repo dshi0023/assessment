@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "title": "Budget-Friendly Meal Planning",
+    "text": "Plan with low, medium, or high budget tiers. NutriBridge adjusts recipes to your financial goals without compromising on health.",
+    "icon": "bi-cash-coin"
+  },
+  {
+    "id": 2,
+    "title": "Personalized Guidance",
+    "text": "Weekly plans tailored to your diet, lifestyle, and preferences—great for students, busy parents, and seniors alike.",
+    "icon": "bi-person-check"
+  },
+  {
+    "id": 3,
+    "title": "Health-Focused Programs",
+    "text": "Choose Heart Health, Diabetes-Friendly, Weight Management, or Wellbeing. Follow simple weekly actions with light progress tracking.",
+    "icon": "bi-heart-pulse"
+  },
+  {
+    "id": 4,
+    "title": "Smart Ingredient Swaps",
+    "text": "Get practical alternatives based on what’s seasonal, local, or in your pantry—keeping meals sustainable and accessible.",
+    "icon": "bi-arrow-repeat"
+  },
+  {
+    "id": 5,
+    "title": "Clear Nutrition Insights",
+    "text": "Every recipe shows calories and key nutrients at a glance, so you can make informed choices quickly.",
+    "icon": "bi-bar-chart-line"
+  },
+  {
+    "id": 6,
+    "title": "Save & Access Anytime",
+    "text": "Your preferences and meal plans are stored locally on your device—no sign-in required.",
+    "icon": "bi-device-ssd"
+  }
+]
