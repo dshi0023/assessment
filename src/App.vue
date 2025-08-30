@@ -2,8 +2,9 @@
 import Navbar from "./components/LandingPage/Navbar.vue";
 import HeroSection from "./components/LandingPage/HeroSection.vue";
 import FeaturesSection from "./components/LandingPage/FeaturesSection.vue";
-import PersonalisedSection from "./components/LandingPage/PersonalisedSection.vue";
+import NewsletterSection from "./components/LandingPage/NewsletterSection.vue";
 import FlowSection from "./components/LandingPage/FlowSection.vue";
+import HealthProgramsSection from "./components/LandingPage/HealthProgramsSection.vue";
 </script>
 
 <template>
@@ -18,6 +19,9 @@ import FlowSection from "./components/LandingPage/FlowSection.vue";
   </div>
   <div><FlowSection /></div>
   <div>
-    <PersonalisedSection />
+    <HealthProgramsSection />
+  </div>
+  <div>
+    <NewsletterSection />
   </div>
 </template>

@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "icon": "bi-heart-pulse",
+    "title": "Heart Health",
+    "desc": "Lower sodium, healthy fats, simple weekly steps.",
+    "tips": [
+      "Swap butter for olive oil",
+      "Add one veg per meal",
+      "Choose lean proteins"
+    ]
+  },
+  {
+    "id": 2,
+    "icon": "bi-droplet",
+    "title": "Diabetes-Friendly",
+    "desc": "Low-GI choices, fiber-first plates, portion cues.",
+    "tips": [
+      "Prefer whole grains",
+      "Watch sweetened drinks",
+      "Balance carbs with protein"
+    ]
+  },
+  {
+    "id": 3,
+    "icon": "bi-bandaid",
+    "title": "Weight Management",
+    "desc": "Practical swaps and mindful meals for healthy weight.",
+    "tips": ["Half plate veggies", "Plan snacks", "Take short walks"]
+  },
+  {
+    "id": 4,
+    "icon": "bi-emoji-smile",
+    "title": "Wellbeing",
+    "desc": "Simple daily habits to boost energy and mood.",
+    "tips": [
+      "Drink 8 glasses of water",
+      "Get 7–8h sleep",
+      "Cook at home 3x/week"
+    ]
+  }
+]
