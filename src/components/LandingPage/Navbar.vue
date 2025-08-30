@@ -14,7 +14,7 @@ const scrollInToSection = (id) => {
 
 <template>
   <nav class="navbar navbar-expand-lg navbar-light navbar-custom">
-    <div class="container">
+    <div class="container-fluid px-3 px-sm-5">
       <a class="navbar-brand fw-bold text-light" href="/">
         <img
           src="../../assets/nutribridge-logo.png"
