@@ -34,7 +34,7 @@ const focusText = computed(() => focusMap[form.value.focus] || "—");
 const validateName = (blur) => {
   const v = (form.value.name || "").trim();
   errors.value.name =
-    v.length < 2 ? (blur ? "Please enter at least 2 characters." : null) : null;
+    v.length < 3 ? (blur ? "Please enter at least 3 characters." : null) : null;
 };
 
 const validateEmail = (blur) => {
