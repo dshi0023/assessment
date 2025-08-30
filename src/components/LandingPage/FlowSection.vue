@@ -2,7 +2,7 @@
 import flows from "../../data/flows.json";
 </script>
 <template>
-  <div class="container-fluid flowsection-container px-3 px-sm-5">
+  <div id="flow" class="container-fluid flowsection-container px-3 px-sm-5">
     <h2
       class="display-5 fw-bold text-center flowsection-header mb-4 text-black"
     >

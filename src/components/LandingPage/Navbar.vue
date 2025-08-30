@@ -1,3 +1,17 @@
+<script setup>
+const scrollInToSection = (id) => {
+  const section = document.getElementById(id);
+  if (section) {
+    section.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
+
+  const nav = document.getElementById("nav");
+  if (nav && nav.classList.contains("show")) {
+    nav.classList.remove("show");
+  }
+};
+</script>
+
 <template>
   <nav class="navbar navbar-expand-lg navbar-light navbar-custom">
     <div class="container">
@@ -5,9 +19,10 @@
         <img
           src="../../assets/nutribridge-logo.png"
           alt="NutriBridge Logo"
-          height="35"
+          height="33"
         />
       </a>
+
       <button
         class="navbar-toggler text-light border"
         type="button"
@@ -25,13 +40,40 @@
           class="navbar-nav ms-auto nav-links fw-medium text-center text-lg-end"
         >
           <li class="nav-item">
-            <a class="nav-link text-light" href="/">Features</a>
+            <a
+              href="#"
+              class="nav-link text-light"
+              @click.prevent="scrollInToSection('features')"
+            >
+              Features
+            </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-light" href="/">Personalize</a>
+            <a
+              href="#"
+              class="nav-link text-light"
+              @click.prevent="scrollInToSection('flow')"
+            >
+              Flow
+            </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-light" href="/">Recipes</a>
+            <a
+              href="#"
+              class="nav-link text-light"
+              @click.prevent="scrollInToSection('programs')"
+            >
+              Health-Program
+            </a>
+          </li>
+          <li class="nav-item">
+            <a
+              href="#"
+              class="nav-link text-light"
+              @click.prevent="scrollInToSection('newsletter')"
+            >
+              Newsletter
+            </a>
           </li>
         </ul>
       </div>
@@ -54,7 +96,6 @@
 .nav-link {
   transition: transform 0.2s ease;
 }
-
 .nav-link:hover {
   transform: scale(0.95);
 }

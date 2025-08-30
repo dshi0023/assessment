@@ -91,7 +91,10 @@ const clearForm = () => {
 </script>
 
 <template>
-  <div class="container-fluid p-3 p-sm-5 newslettersection-container">
+  <div
+    id="newsletter"
+    class="container-fluid p-3 p-sm-5 newslettersection-container"
+  >
     <h2
       class="display-6 fw-bold text-center newslettersection-header mb-4 text-black"
     >

@@ -3,7 +3,10 @@ import features from "../../data/features.json";
 </script>
 
 <template>
-  <div class="container-fluid px-3 px-sm-5 bg-light featuressection-container">
+  <div
+    id="features"
+    class="container-fluid px-3 px-sm-5 bg-light featuressection-container"
+  >
     <h2 class="display-5 fw-bold text-center featuressection-header mb-4">
       Why NutriBridge
     </h2>
