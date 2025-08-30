@@ -1,5 +1,5 @@
 <script setup>
-import { ref } from "vue";
+import { ref, computed } from "vue";
 import { useLocalStorage } from "../../helpers/UseLocalStorage";
 
 const { state: stored, save } = useLocalStorage("nb_newsletter", {
@@ -19,6 +19,17 @@ const errors = ref({
   focus: null,
   agree: null,
 });
+
+const isSubscribed = ref(false);
+
+const focusMap = {
+  heart: "Heart Health",
+  diabetes: "Diabetes-Friendly",
+  weight: "Weight Management",
+  wellbeing: "General Wellbeing",
+};
+
+const focusText = computed(() => focusMap[form.value.focus] || "—");
 
 const validateName = (blur) => {
   const v = (form.value.name || "").trim();
@@ -67,7 +78,7 @@ const submitForm = () => {
     !errors.value.agree
   ) {
     save({ ...form.value });
-    alert("Thanks for subscribing! We’ll tailor nutrition tips for you.");
+    isSubscribed.value = true;
   }
 };
 
@@ -105,7 +116,12 @@ const clearForm = () => {
       <div class="col-12 col-md-8 col-lg-7">
         <div class="card shadow newsletter-card py-3">
           <div class="card-body">
-            <form novalidate @submit.prevent="submitForm" class="p-2">
+            <form
+              v-if="!isSubscribed"
+              novalidate
+              @submit.prevent="submitForm"
+              class="p-2"
+            >
               <div class="mb-3">
                 <label class="form-label newsletter-label" for="name"
                   >Name *</label
@@ -204,22 +220,15 @@ const clearForm = () => {
                   :class="{ 'is-invalid': !!errors.agree }"
                   required
                 />
-                <label class="form-check-label newsletter-label" for="agree">
-                  I agree to receive weekly nutrition emails *
-                </label>
+                <label class="form-check-label newsletter-label" for="agree"
+                  >I agree to receive weekly nutrition emails *</label
+                >
                 <small v-if="errors.agree" class="text-danger d-block mt-1">{{
                   errors.agree
                 }}</small>
               </div>
 
               <div class="d-flex gap-2">
-                <button
-                  class="btn btn-small bg-black text-white w-100 newsletter-submit-button"
-                  type="button"
-                  @click="clearForm"
-                >
-                  Clear
-                </button>
                 <button
                   class="btn bg-black text-white w-100 newsletter-submit-button"
                   type="submit"
@@ -229,10 +238,33 @@ const clearForm = () => {
               </div>
             </form>
 
-            <p class="small text-muted mt-3 mb-0">
-              Validations: required text length, email format, number range,
-              required dropdown, required checkbox.
-            </p>
+            <div v-else class="text-center py-3">
+              <h3 class="h5 mb-2">🎉 You’re subscribed!</h3>
+              <p class="text-muted mb-3">
+                We’ll send weekly tips to
+                <strong>{{ form.email }}</strong> tailored for
+                <strong>{{ focusText }}</strong> around
+                <strong>${{ form.weeklyBudget }}</strong
+                >/week.
+              </p>
+              <div class="d-flex gap-2 justify-content-center">
+                <button
+                  class="btn btn-outline-secondary"
+                  @click="isSubscribed = false"
+                >
+                  Edit preferences
+                </button>
+                <button
+                  class="btn btn-secondary"
+                  @click="
+                    clearForm();
+                    isSubscribed = false;
+                  "
+                >
+                  Subscribe another email
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
