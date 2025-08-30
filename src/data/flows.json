@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "icon": "bi-book",
+    "colorClass": "text-black",
+    "title": "1. Learn & Choose",
+    "text": "Explore bite-size nutrition education — like understanding macros, healthy swaps, and portion control — then pick your health focus (e.g., heart health, diabetes, weight management)."
+  },
+  {
+    "id": 2,
+    "icon": "bi-calendar2-week",
+    "colorClass": "text-success",
+    "title": "2. Receive a Healthy Plan",
+    "text": "NutriBridge generates a weekly meal plan with budget-friendly recipes, nutrition insights (calorie counts, swaps), and a simple one-step guide to stay on track."
+  },
+  {
+    "id": 3,
+    "icon": "bi-check-circle",
+    "colorClass": "text-info",
+    "title": "3. Try It & See Results",
+    "text": "Apply the plan, use built-in progress markers (like check-ins or meal completions), save everything locally — and build healthier, long-lasting habits."
+  }
+]

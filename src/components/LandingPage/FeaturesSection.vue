@@ -3,14 +3,14 @@ import features from "../../data/features.json";
 </script>
 
 <template>
-  <div class="container-fluid p-3 p-sm-5 featuressection-container">
+  <div class="container-fluid px-3 px-sm-5 bg-light featuressection-container">
     <h2 class="display-5 fw-bold text-center featuressection-header mb-4">
       Why NutriBridge
     </h2>
 
-    <div class="row g-3">
+    <div class="row g-3 mt-2 sm:mt-4">
       <div v-for="f in features" :key="f.id" class="col-12 col-md-6 col-xxl-4">
-        <div class="card h-100 card-container">
+        <div class="card h-100 card-container border rounded">
           <div class="card-body py-4 d-flex flex-column align-items-center">
             <div class="mb-3 card-custom-icon-box p-2 rounded shadow">
               <i :class="f.icon" class="text-white card-custom-icon"></i>
@@ -30,13 +30,18 @@ import features from "../../data/features.json";
 
 <style>
 .featuressection-container {
-  background-color: #d1d8be;
+  padding: 6rem 0rem;
 }
 .featuressection-header {
   font-family: "Rubik", sans-serif;
 }
 .card-container {
-  background-color: #a7c1a8;
+  background-color: rgb(231, 231, 231);
+  transition: background-color 0.5s ease;
+}
+.card-container:hover {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
 }
 .card-title {
   font-family: "Poppins", sans-serif;
