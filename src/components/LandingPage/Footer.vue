@@ -11,7 +11,7 @@ const scrollInToSection = (id) => {
   <footer class="footer-custom text-light py-4">
     <div class="container">
       <div class="row align-items-center">
-        <div class="col-12 col-md-4 text-center text-md-start mb-3 mb-md-0">
+        <div class="col-12 col-lg-4 text-center text-lg-start mb-3 mb-lg-0">
           <a
             href="/"
             class="d-inline-flex align-items-center text-decoration-none"
@@ -25,7 +25,7 @@ const scrollInToSection = (id) => {
           </a>
         </div>
 
-        <div class="col-12 col-md-4 text-center mb-3 mb-md-0">
+        <div class="col-12 col-lg-4 text-center mb-3 mb-lg-0">
           <ul class="list-inline mb-0 footer-links">
             <li class="list-inline-item mx-2">
               <a
@@ -62,7 +62,7 @@ const scrollInToSection = (id) => {
           </ul>
         </div>
 
-        <div class="col-12 col-md-4 text-center text-md-end">
+        <div class="col-12 col-lg-4 text-center text-lg-end">
           <small class="d-block"
             >&copy; 2025 NutriBridge. All rights reserved.</small
           >
